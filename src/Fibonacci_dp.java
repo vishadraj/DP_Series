@@ -15,6 +15,7 @@ public class Fibonacci_dp {
     }
     public static int Fibonacci(int n, int[] dp_array){
         if(n==0 || n==1) return n;
+        if(dp_array[n] != 0) return dp_array[n];
 
         return 0;
     }
