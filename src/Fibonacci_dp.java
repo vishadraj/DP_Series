@@ -14,6 +14,8 @@ public class Fibonacci_dp {
         System.out.println(fibonacci_no);
     }
     public static int Fibonacci(int n, int[] dp_array){
+        if(n==0 || n==1) return n;
+
         return 0;
     }
 
