@@ -18,7 +18,7 @@ public class Fibonacci_dp {
         if(dp_array[n] != 0) return dp_array[n];
         int fib = Fibonacci(n-1,dp_array) + Fibonacci(n-2,dp_array);
         dp_array[n] = fib;
-        return 0;
+        return fib;
     }
 
 }
