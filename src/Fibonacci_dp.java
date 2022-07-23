@@ -11,7 +11,7 @@ public class Fibonacci_dp {
         Scanner input = new Scanner(System.in);
         int number = input.nextInt();
         int fibonacci_no = Fibonacci(number, new int[number+1]);
-
+        System.out.println(fibonacci_no);
     }
     public static int Fibonacci(int n, int[] dp_array){
         return 0;
