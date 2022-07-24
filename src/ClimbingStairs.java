@@ -15,6 +15,19 @@ public class ClimbingStairs {
     }
 
     public static int countPath(int n, int [] array){
-        return 0;
+        if(n==0)
+            return 1;
+        else if(n <0)
+            return 0;
+
+        if(array[n] > 0 ) {
+            return array[n];
+        }
+        int num1 = countPath(n-1,array);
+        int num2 = countPath(n-2, array);
+        int num3 = countPath(n-3, array);
+        int totalPath = num1+num2+num3;
+        array[n]= totalPath;
+        return totalPath;
     }
 }
