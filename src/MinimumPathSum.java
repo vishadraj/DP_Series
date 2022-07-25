@@ -19,6 +19,9 @@ public class MinimumPathSum {
             }
         }
 
+        int [][] dp_array = new int[row][col];
+
+
 
     }
 }
