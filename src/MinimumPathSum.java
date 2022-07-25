@@ -25,6 +25,8 @@ public class MinimumPathSum {
             for(int j=dp_array[0].length-1;j>=0;j--){
                 if(i==dp_array.length-1 && j==dp_array[0].length-1){
                     dp_array[i][j]= array[i][j];
+                } else if(i==dp_array.length-1){
+                    dp_array[i][j]= dp_array[i][j+1]+array[i][j];
                 }
             }
         }
