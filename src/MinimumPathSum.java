@@ -34,7 +34,7 @@ public class MinimumPathSum {
                 }
             }
         }
-
+        System.out.println(dp_array[0][0]);
 
     }
 }
