@@ -21,14 +21,16 @@ public class MinimumPathSum {
 
         int [][] dp_array = new int[row][col];
 
-        for(int i=dp_array.length-1; i>=0; i--){
-            for(int j=dp_array[0].length-1;j>=0;j--){
-                if(i==dp_array.length-1 && j==dp_array[0].length-1){
-                    dp_array[i][j]= array[i][j];
-                } else if(i==dp_array.length-1){
-                    dp_array[i][j]= dp_array[i][j+1]+array[i][j];
-                } else if(j==dp_array[0].length-1){
-                    dp_array[i][j]= dp_array[i+1][j]+array[i][j];
+        for(int i=dp_array.length-1; i>=0; i--) {
+            for (int j = dp_array[0].length - 1; j >= 0; j--) {
+                if (i == dp_array.length - 1 && j == dp_array[0].length - 1) {
+                    dp_array[i][j] = array[i][j];
+                } else if (i == dp_array.length - 1) {
+                    dp_array[i][j] = dp_array[i][j + 1] + array[i][j];
+                } else if (j == dp_array[0].length - 1) {
+                    dp_array[i][j] = dp_array[i + 1][j] + array[i][j];
+                } else {
+                    dp_array[i][j] = Math.min(dp_array[i + 1][j], dp_array[i][j + 1]) + array[i][j];
                 }
             }
         }
