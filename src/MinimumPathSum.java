@@ -21,6 +21,13 @@ public class MinimumPathSum {
 
         int [][] dp_array = new int[row][col];
 
+        for(int i=dp_array.length-1; i>=0; i--){
+            for(int j=dp_array[0].length-1;j>=0;j--){
+                if(i==dp_array.length-1 && j==dp_array[0].length-1){
+                    dp_array[i][j]= array[i][j];
+                }
+            }
+        }
 
 
     }
