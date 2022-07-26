@@ -6,7 +6,7 @@
 
 import java.util.Scanner;
 
-public class PathWithMinimumGold {
+public class PathWithMaximumGold {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         int row = input.nextInt();
@@ -21,18 +21,22 @@ public class PathWithMinimumGold {
 
         for(int j= array[0].length-1; j>=0 ; j--){
             for(int i=array[0].length-1; i>=0;i--){
-                if(j==array[0].length-1){
+                if(j==array[0].length-1) // if we are at last column
+                {
                     dp_array[i][j]= array[i][j];
-                } else if(i==0){
+                } else if(i==0) // if we are at first row
+                {
                     dp_array[i][j]= array[i][j] + Math.max(dp_array[i][j+1],dp_array[i+1][j+1]);
-                } else if(i==array.length-1){
+                } else if(i==array.length-1) // if we are at last row
+                {
                     dp_array[i][j]= array[i][j] + Math.max(dp_array[i][j+1],dp_array[i-1][j+1]);
-                } else{
+                } else // except the rest condition
+                {
                     dp_array[i][j] = array[i][j] + Math.max(dp_array[i][j+1],Math.max(dp_array[i+1][j+1],dp_array[i-1][j+1]));
                 }
             }
         }
-
+        int max = dp_array[0][0];
 
     }
 }
