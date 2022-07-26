@@ -19,6 +19,20 @@ public class PathWithMinimumGold {
         }
         int [][] dp_array = new int[row][col];
 
+        for(int j= array[0].length-1; j>=0 ; j--){
+            for(int i=array[0].length-1; i>=0;i--){
+                if(j==array[0].length-1){
+                    dp_array[i][j]= array[i][j];
+                } else if(i==0){
+                    dp_array[i][j]= array[i][j] + Math.max(dp_array[i][j+1],dp_array[i+1][j+1]);
+                } else if(i==array.length-1){
+                    dp_array[i][j]= array[i][j] + Math.max(dp_array[i][j+1],dp_array[i-1][j+1]);
+                } else{
+                    dp_array[i][j] = array[i][j] + Math.max(dp_array[i][j+1],Math.max(dp_array[i+1][j+1],dp_array[i-1][j+1]));
+                }
+            }
+        }
+
 
     }
 }
