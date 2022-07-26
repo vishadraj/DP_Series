@@ -12,6 +12,12 @@ public class PathWithMinimumGold {
         int row = input.nextInt();
         int col = input.nextInt();
         int [][] array = new int[row][col];
-        
+        for (int i=0; i<array.length; i++){
+            for (int j=0; j<array[0].length; j++){
+                array[i][j] = input.nextInt();
+            }
+        }
+
+
     }
 }
