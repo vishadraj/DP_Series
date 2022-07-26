@@ -37,6 +37,10 @@ public class PathWithMaximumGold {
             }
         }
         int max = dp_array[0][0];
-
+        for (int i = 1; i <dp_array.length ; i++) {
+            if(dp_array[i][0] > max)
+                max = dp_array[i][0];
+        }
+        System.out.println(max);
     }
 }
