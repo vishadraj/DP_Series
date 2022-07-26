@@ -20,7 +20,7 @@ public class PathWithMaximumGold {
         int [][] dp_array = new int[row][col];
 
         for(int j= array[0].length-1; j>=0 ; j--){
-            for(int i=array[0].length-1; i>=0;i--){
+            for(int i=array.length-1; i>=0;i--){
                 if(j==array[0].length-1) // if we are at last column
                 {
                     dp_array[i][j]= array[i][j];
